@@ -761,3 +761,90 @@ transform:translate(-220px,-160px);
 }
 
 }
+
+.member-slider{
+display:flex;
+gap:20px;
+overflow-x:auto;
+padding:20px 0;
+scroll-snap-type:x mandatory;
+}
+
+.member-slider::-webkit-scrollbar{
+display:none;
+}
+
+.member-card{
+flex-shrink:0;
+
+width:220px;
+height:340px;
+
+border-radius:28px;
+
+overflow:hidden;
+
+position:relative;
+
+text-decoration:none;
+
+color:white;
+
+scroll-snap-align:center;
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(255,255,255,.08);
+
+backdrop-filter:blur(20px);
+
+transition:.35s;
+}
+
+.member-card:hover{
+transform:scale(1.05);
+}
+
+.member-card img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.member-info{
+position:absolute;
+
+left:0;
+right:0;
+bottom:0;
+
+padding:18px;
+
+background:linear-gradient(
+to top,
+rgba(0,0,0,.9),
+rgba(0,0,0,0)
+);
+}
+
+.member-info h3{
+font-size:1rem;
+margin-bottom:4px;
+}
+
+.member-info p{
+font-size:.85rem;
+opacity:.8;
+}
+
+.empty-card{
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.question-mark{
+font-size:6rem;
+font-weight:bold;
+opacity:.25;
+}
