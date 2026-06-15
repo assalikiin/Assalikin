@@ -124,7 +124,7 @@ overflow:hidden;
 }
 
 .hero h1{
-font-size:clamp(3rem,9vw,7rem);
+font-size:clamp(2.5rem,8vw,7rem);
 font-weight:900;
 letter-spacing:1px;
 position:relative;
