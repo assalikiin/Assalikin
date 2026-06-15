@@ -601,3 +601,53 @@ transition:.3s;
 .welcome-info:hover{
 transform:scale(1.02);
 }
+
+.countdown-card{
+padding:35px 25px;
+border-radius:30px;
+text-align:center;
+}
+
+#countdown{
+display:flex;
+justify-content:center;
+gap:12px;
+margin:30px 0;
+flex-wrap:wrap;
+}
+
+#countdown div{
+width:75px;
+height:90px;
+
+display:flex;
+flex-direction:column;
+
+justify-content:center;
+align-items:center;
+
+background:rgba(255,255,255,.06);
+
+border:1px solid rgba(255,255,255,.08);
+
+border-radius:18px;
+
+backdrop-filter:blur(20px);
+
+box-shadow:
+0 0 25px rgba(255,255,255,.05);
+}
+
+#countdown span{
+font-size:2rem;
+font-weight:800;
+line-height:1;
+}
+
+#countdown p{
+font-size:.7rem;
+margin-top:8px;
+opacity:.7;
+text-transform:uppercase;
+letter-spacing:1px;
+}
