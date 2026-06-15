@@ -501,3 +501,13 @@ transform:translateY(-2px);
 0%,100%{transform:translate(-10px,-8px) scale(1);}
 50%{transform:translate(10px,12px) scale(1.06);}
 }
+
+.footer-bar{
+text-align:center;
+padding:25px 15px;
+font-size:.9rem;
+opacity:.7;
+border-top:1px solid rgba(255,255,255,.08);
+background:rgba(255,255,255,.03);
+backdrop-filter:blur(10px);
+}
