@@ -129,6 +129,8 @@ font-weight:900;
 letter-spacing:4px;
 position:relative;
 animation:pulse 4s infinite;
+  width:100%;
+text-align:center;
 }
 
 @keyframes pulse{
