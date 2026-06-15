@@ -589,7 +589,7 @@ backdrop-filter:blur(12px);
 box-shadow:
 0 0 20px rgba(255,255,255,.04);
 
-transform:rotate(-1deg);
+transform:none;
 
 left:12px;
 
@@ -599,5 +599,5 @@ transition:.3s;
 }
 
 .welcome-info:hover{
-transform:rotate(0deg) scale(1.02);
+transform:scale(1.02);
 }
