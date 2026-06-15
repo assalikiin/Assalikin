@@ -374,3 +374,130 @@ font-size:3rem;
 
 
   }
+.welcome-overlay{
+position:fixed;
+inset:0;
+display:flex;
+align-items:center;
+justify-content:center;
+background:rgba(0,0,0,.62);
+backdrop-filter:blur(16px);
+z-index:3000;
+transition:.45s ease;
+padding:20px;
+}
+
+.welcome-overlay.hide{
+opacity:0;
+pointer-events:none;
+}
+
+.welcome-glow{
+position:absolute;
+width:420px;
+height:420px;
+border-radius:50%;
+background:radial-gradient(circle, rgba(255,255,255,.18), transparent 70%);
+filter:blur(35px);
+animation:glowMove 5s ease-in-out infinite;
+}
+
+.welcome-card{
+position:relative;
+width:min(92vw, 420px);
+padding:28px 24px;
+border-radius:28px;
+text-align:center;
+animation:welcomeFloat 4s ease-in-out infinite;
+overflow:hidden;
+}
+
+.welcome-card::before{
+content:"";
+position:absolute;
+inset:-2px;
+background:linear-gradient(135deg, rgba(255,255,255,.22), transparent 40%, rgba(255,255,255,.12));
+opacity:.5;
+pointer-events:none;
+}
+
+.welcome-kicker{
+font-size:.95rem;
+letter-spacing:2px;
+text-transform:uppercase;
+opacity:.8;
+margin-bottom:10px;
+}
+
+.welcome-card h2{
+font-size:1.7rem;
+margin-bottom:10px;
+}
+
+.welcome-text{
+opacity:.8;
+margin-bottom:18px;
+line-height:1.6;
+}
+
+#welcomeForm{
+display:flex;
+flex-direction:column;
+gap:14px;
+position:relative;
+z-index:1;
+}
+
+#welcomeForm input{
+width:100%;
+padding:14px 16px;
+border-radius:16px;
+border:1px solid rgba(255,255,255,.12);
+background:rgba(255,255,255,.06);
+color:#fff;
+outline:none;
+}
+
+#welcomeForm input::placeholder{
+color:rgba(255,255,255,.55);
+}
+
+.welcome-actions{
+display:flex;
+gap:12px;
+}
+
+.welcome-actions button{
+flex:1;
+padding:13px 16px;
+border:none;
+border-radius:14px;
+cursor:pointer;
+font-weight:700;
+transition:.25s;
+}
+
+.welcome-actions button[type="submit"]{
+background:#fff;
+color:#000;
+}
+
+.welcome-actions button[type="button"]{
+background:rgba(255,255,255,.08);
+color:#fff;
+border:1px solid rgba(255,255,255,.12);
+}
+
+.welcome-actions button:hover{
+transform:translateY(-2px);
+}
+
+@keyframes welcomeFloat{
+0%,100%{transform:translateY(0) rotate(0deg);}
+50%{transform:translateY(-8px) rotate(.4deg);}
+}
+
+@keyframes glowMove{
+0%,100%{transform:translate(-10px,-8px) scale(1);}
+50%{transform:translate(10px,12px) scale(1.06);}
+}
