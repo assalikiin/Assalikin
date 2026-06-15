@@ -128,8 +128,24 @@ background-size:cover;
 background-position:center;
 background-repeat:no-repeat;
   }
+.hero::before{
+content:"";
+position:absolute;
+inset:0;
+
+background:
+linear-gradient(
+180deg,
+rgba(0,0,0,.35) 0%,
+rgba(0,0,0,.55) 40%,
+rgba(0,0,0,.85) 100%
+);
+
+z-index:1;
+}
 
 .hero h1{
+  z-index:2;
 font-size:clamp(2.3rem,8vw,7rem);
 font-weight:900;
 letter-spacing:1px;
@@ -138,6 +154,9 @@ animation:pulse 4s infinite;
 text-align:center;
 padding:0 20px;
   white-space:nowrap;
+  text-shadow:
+0 0 20px rgba(255,255,255,.4),
+0 0 40px rgba(255,255,255,.2);
 }
 
 @keyframes pulse{
@@ -153,6 +172,8 @@ margin-top:18px;
 max-width:650px;
 opacity:.75;
 line-height:1.7;
+  position:relative;
+z-index:2;
 }
 
 .section{
