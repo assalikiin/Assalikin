@@ -537,3 +537,37 @@ border-top:1px solid rgba(255,255,255,.08);
 background:rgba(255,255,255,.03);
 backdrop-filter:blur(10px);
 }
+
+body.light{
+background:#f2f4f7;
+color:#111;
+}
+
+body.light .glass{
+background:rgba(255,255,255,.65);
+border:1px solid rgba(0,0,0,.08);
+}
+
+body.light nav{
+background:rgba(255,255,255,.7);
+}
+
+body.light nav a{
+color:#111;
+}
+
+body.light .card{
+color:#111;
+}
+
+body.light textarea{
+color:#111;
+}
+
+body.light .hamburger span{
+background:#111;
+}
+
+body.light .theme-toggle{
+color:#111;
+}
