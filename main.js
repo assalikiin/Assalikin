@@ -56,31 +56,6 @@ function revealElements() {
 window.addEventListener("scroll", revealElements);
 window.addEventListener("load", revealElements);
 
-const slides = document.querySelector(".slides");
-
-let autoSlide = setInterval(() => {
-
-  slides.scrollBy({
-    left: 340,
-    behavior: "smooth"
-  });
-
-  if (
-    slides.scrollLeft + slides.clientWidth >=
-    slides.scrollWidth - 20
-  ) {
-
-    setTimeout(() => {
-      slides.scrollTo({
-        left: 0,
-        behavior: "smooth"
-      });
-    }, 1000);
-
-  }
-
-}, 4000);
-
 let selectedRating = 0;
 
 document
