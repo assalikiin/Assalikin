@@ -571,3 +571,33 @@ background:#111;
 body.light .theme-toggle{
 color:#111;
 }
+.welcome-info{
+position:relative;
+
+margin-top:18px;
+
+padding:14px 16px;
+
+background:rgba(255,255,255,.04);
+
+border:1px solid rgba(255,255,255,.08);
+
+border-radius:18px;
+
+backdrop-filter:blur(12px);
+
+box-shadow:
+0 0 20px rgba(255,255,255,.04);
+
+transform:rotate(-1deg);
+
+left:12px;
+
+width:92%;
+
+transition:.3s;
+}
+
+.welcome-info:hover{
+transform:rotate(0deg) scale(1.02);
+}
