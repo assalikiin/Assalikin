@@ -13,33 +13,56 @@ overflow-x:hidden;
 }
 
 .bg-glow{
+.bg-glow{
 position:fixed;
 inset:0;
+overflow:hidden;
+z-index:-1;
+background:#050505;
+}
+
+.bg-glow::before,
+.bg-glow::after{
+content:"";
+position:absolute;
+border-radius:50%;
+filter:blur(140px);
+}
+
+.bg-glow::before{
+width:700px;
+height:700px;
 
 background:
 radial-gradient(
-circle at 20% 30%,
-rgba(255,255,255,.10),
-transparent 35%
-),
-
-radial-gradient(
-circle at 80% 70%,
-rgba(200,200,200,.08),
-transparent 40%
-),
-
-radial-gradient(
-circle at 50% 50%,
-rgba(255,255,255,.05),
-transparent 50%
+circle,
+rgba(255,255,255,.12) 0%,
+rgba(255,255,255,.05) 40%,
+transparent 75%
 );
 
-filter:blur(80px);
+top:-150px;
+left:-150px;
 
-animation:auroraBackground 20s ease-in-out infinite alternate;
+animation:moveGlow1 40s ease-in-out infinite alternate;
+}
 
-z-index:-1;
+.bg-glow::after{
+width:800px;
+height:800px;
+
+background:
+radial-gradient(
+circle,
+rgba(255,255,255,.10) 0%,
+rgba(255,255,255,.04) 45%,
+transparent 75%
+);
+
+bottom:-250px;
+right:-250px;
+
+animation:moveGlow2 55s ease-in-out infinite alternate;
 }
 
 @keyframes auroraBackground{
