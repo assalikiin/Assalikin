@@ -1,4 +1,4 @@
-const text = "ANWARUSSALIKIIN";
+const text = "ASSALIKIIN";
 const typingText = document.getElementById("typingText");
 
 let i = 0;
