@@ -16,6 +16,30 @@ rel="stylesheet"
 </head>
 
 <body>
+   <div id="welcomeOverlay" class="welcome-overlay">
+  <div class="welcome-glow"></div>
+
+  <div class="welcome-card glass">
+    <p class="welcome-kicker">Ahlan wa Sahlan</p>
+    <h2>Selamat datang di Assalikiin.id</h2>
+    <p class="welcome-text">Tulis nama Anda untuk masuk.</p>
+
+    <form id="welcomeForm">
+      <input
+        type="text"
+        id="visitorName"
+        placeholder="Nama Anda"
+        maxlength="40"
+        autocomplete="name"
+      >
+
+      <div class="welcome-actions">
+        <button type="submit">Masuk</button>
+        <button type="button" id="skipWelcome">Lewati</button>
+      </div>
+    </form>
+  </div>
+   </div>
 
 <div class="bg-glow"></div>
 
