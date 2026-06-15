@@ -1,3 +1,52 @@
+const welcomeOverlay = document.getElementById("welcomeOverlay");
+const welcomeForm = document.getElementById("welcomeForm");
+const visitorNameInput = document.getElementById("visitorName");
+const skipWelcome = document.getElementById("skipWelcome");
+
+const WELCOME_FORM_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLSfUGb6PYb6MQYG7S0W1MSmQbhnXT18WLaUlzx6pMaF4ndFErg/formResponse";
+
+const WELCOME_ENTRY = "entry.398847967";
+
+document.body.style.overflow = "hidden";
+
+async function sendWelcomeName(name) {
+  const formData = new FormData();
+  formData.append(WELCOME_ENTRY, name.trim() || "Guest");
+
+  try {
+    await fetch(WELCOME_FORM_URL, {
+      method: "POST",
+      mode: "no-cors",
+      body: formData
+    });
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+function closeWelcome() {
+  welcomeOverlay.classList.add("hide");
+  document.body.style.overflow = "";
+  setTimeout(() => {
+    welcomeOverlay.remove();
+  }, 450);
+}
+
+welcomeForm.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  await sendWelcomeName(visitorNameInput.value);
+  closeWelcome();
+});
+
+skipWelcome.addEventListener("click", async () => {
+  await sendWelcomeName("Guest");
+  closeWelcome();
+});
+
+setTimeout(() => {
+  visitorNameInput.focus();
+}, 200);
 const text = "ASSALIKIIN";
 const typingText = document.getElementById("typingText");
 
