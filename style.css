@@ -42,13 +42,38 @@ animation:auroraBackground 20s ease-in-out infinite alternate;
 z-index:-1;
 }
 
-@keyframes floatGlow{
+@keyframes auroraBackground{
+
 0%{
-transform:translate(0,0);
+transform:
+translate(-50px,-20px)
+scale(1);
 }
+
+25%{
+transform:
+translate(40px,30px)
+scale(1.1);
+}
+
+50%{
+transform:
+translate(-20px,60px)
+scale(.95);
+}
+
+75%{
+transform:
+translate(50px,-40px)
+scale(1.08);
+}
+
 100%{
-transform:translate(250px,150px);
+transform:
+translate(-30px,20px)
+scale(1);
 }
+
 }
 
 header{
