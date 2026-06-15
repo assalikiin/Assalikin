@@ -124,8 +124,8 @@ padding:20px;
 overflow:hidden;
 
 background-image:url("Herojpg/Desain tanpa judul_20260615_130747_0000.jpg");
-background-size:cover;
-background-position:center;
+background-size:75%;
+background-position:center top;
 background-repeat:no-repeat;
   }
 .hero::before{
@@ -136,9 +136,11 @@ inset:0;
 background:
 linear-gradient(
 180deg,
-rgba(0,0,0,.35) 0%,
-rgba(0,0,0,.55) 40%,
-rgba(0,0,0,.85) 100%
+rgba(0,0,0,.25) 0%,
+rgba(0,0,0,.35) 25%,
+rgba(0,0,0,.55) 50%,
+rgba(0,0,0,.85) 75%,
+rgba(0,0,0,1) 100%
 );
 
 z-index:1;
