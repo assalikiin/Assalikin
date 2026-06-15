@@ -226,11 +226,15 @@ scroll-snap-align:center;
 transition:.4s;
 flex-shrink:0;
 }
-
-.slides img:hover{
-transform:scale(1.04);
+.slides img:nth-child(odd){
+transform:scale(.95);
+opacity:.85;
 }
 
+.slides img:hover{
+transform:scale(1);
+opacity:1;
+}
 .nav{
 display:none;
 }
