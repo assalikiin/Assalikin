@@ -779,3 +779,26 @@ box-shadow:
 }
 
 }
+@keyframes moveGlow1{
+
+0%{
+transform:translate(0,0);
+}
+
+100%{
+transform:translate(250px,180px);
+}
+
+}
+
+@keyframes moveGlow2{
+
+0%{
+transform:translate(0,0);
+}
+
+100%{
+transform:translate(-220px,-160px);
+}
+
+}
